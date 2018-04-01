@@ -1,11 +1,12 @@
 # homebridge-hubble-temp
 
-Motorola baby monitor temperature plugin for HomeBridge.
+Motorola baby monitor temperature plugin for [HomeBridge](https://github.com/nfarina/homebridge).
+
 Adds a temperature sensor accessory to Homekit, with same temperature value as can be seen in Hubble app.
 
 Tested with:
 
-- Motorola MBP-845 Connect
+- Motorola MBP-845 Connect camera
 
 ## Installation
 
@@ -13,11 +14,11 @@ Tested with:
 2. Install this plugin using: `npm install -g https://github.com/onderweg/homebridge-hubble-temp.git`
 3. Update your Homebridge configuration file (`config.json`)
 
-## Configurtion
+## Configuration
 
 The available fields in the config.json file are:
  - `host` [Mandatory] Camera IP or host name
- - `update_interal`: [Optional] Defines the polling period in seconds for the temperature value (Default is 60s)
+ - `update_interal`: [Optional] Defines the polling period in seconds for the temperature value (default is 60s)
 
 Example:
 
