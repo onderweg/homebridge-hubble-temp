@@ -61,10 +61,11 @@ class HubbleAccessory {
     async getCurrentTemperature(callback) {
         try {
             const value = await this.hubbleClient.getTemperature();
+            this.log(`Current temperature: ${value}°`);
             callback(null, value);
         } catch (e) {
             callback(e);
-        }
+        }        
     };
 }
 

@@ -17,8 +17,8 @@ Tested with:
 ## Configuration
 
 The available fields in the config.json file are:
- - `host` [Mandatory] Camera IP or host name
- - `update_interal`: [Optional] Defines the polling period in seconds for the temperature value (default is 60s)
+ - `host` [Mandatory] Camera IP or host name on the local network. Note that this host must be reachable from the HomeBridge instance.
+ - `update_interval`: [Optional] Defines the polling period in seconds for the temperature value (default is 60s)
 
 Example:
 

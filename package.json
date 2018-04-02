@@ -1,6 +1,6 @@
 {
   "name": "homebridge-hubble-temp",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,10 @@
   "author": "Onderweg",
   "license": "ISC",
   "keywords": [
-    "homebridge-plugin"
+    "homebridge-plugin",
+    "motorola",
+    "hubble",
+    "temperature"
   ],
   "engines": {
     "node": ">=7.0.0",
