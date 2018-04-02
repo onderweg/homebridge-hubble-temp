@@ -17,6 +17,8 @@ Tested with:
 ## Configuration
 
 The available fields in the config.json file are:
+ - `accessory` [Mandatory] Always "HubbleCameraTemp"
+ - `name` [Mandatory] Descriptive name of virtual device
  - `host` [Mandatory] Camera IP or host name on the local network. Note that this host must be reachable from the HomeBridge instance.
  - `update_interval`: [Optional] Defines the polling period in seconds for the temperature value (default is 60s)
 

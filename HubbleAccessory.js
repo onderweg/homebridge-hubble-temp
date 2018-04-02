@@ -4,7 +4,7 @@ const packageJSON = require('./package.json');
 module.exports = (Service, Characteristic) => class HubbleAccessory {
 
     constructor(log, config) {
-        this.log = log;
+        this.log = log;        
         this.services = [];
         this.hubbleClient = new HubbleClient({
             host: config.host
@@ -46,9 +46,15 @@ module.exports = (Service, Characteristic) => class HubbleAccessory {
             })               
             .on('get', this.getCurrentTemperature.bind(this));
         
-        setInterval(async () => {
-            this.log('Temperature polling start');
-            const value = await this.hubbleClient.getTemperature();
+        setInterval(async () => {            
+            let value;
+            try {
+                value = await this.hubbleClient.getTemperature();
+            } catch (e) {
+                this.log.error(e.message);
+                return;
+            }
+            this.log.info(`Temperature pollig result: ${value}`);
             sensorService
                 .getCharacteristic(Characteristic.CurrentTemperature)
                 .updateValue(value);   
@@ -60,7 +66,7 @@ module.exports = (Service, Characteristic) => class HubbleAccessory {
     async getCurrentTemperature(callback) {
         try {
             const value = await this.hubbleClient.getTemperature();
-            this.log(`Current temperature: ${value}°`);
+            this.log.info(`Current temperature: ${value}°`);
             callback(null, value);
         } catch (e) {
             callback(e);
