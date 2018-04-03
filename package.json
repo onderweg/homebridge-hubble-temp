@@ -1,7 +1,7 @@
 {
   "name": "homebridge-hubble-temp",
   "version": "0.4.1",
-  "description": "",
+  "description": "Motorola baby monitor temperature plugin for HomeBridge",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

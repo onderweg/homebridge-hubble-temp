@@ -54,7 +54,7 @@ module.exports = (Service, Characteristic) => class HubbleAccessory {
                 this.log.error(e.message);
                 return;
             }
-            this.log.info(`Temperature pollig result: ${value}`);
+            this.log.info(`Temperature pollig result: ${value}°`);
             sensorService
                 .getCharacteristic(Characteristic.CurrentTemperature)
                 .updateValue(value);   
