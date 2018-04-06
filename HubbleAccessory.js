@@ -28,8 +28,8 @@ module.exports = (Service, Characteristic) => class HubbleAccessory {
         const accessoryInfo = new Service.AccessoryInformation();
     
         accessoryInfo
-          .setCharacteristic(Characteristic.Manufacturer, "Motorola")
-          .setCharacteristic(Characteristic.Model, "Baby monitor")       
+          .setCharacteristic(Characteristic.Manufacturer, "HomeBridge")
+          .setCharacteristic(Characteristic.Model, "Hubble Temperature Plugin")       
           .setCharacteristic(Characteristic.FirmwareRevision, packageJSON.version)             
           .setCharacteristic(Characteristic.SerialNumber, "123-456-789");
     
