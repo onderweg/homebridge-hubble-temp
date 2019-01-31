@@ -39,7 +39,9 @@ Example:
 
 The plugin polls this camera endpoint:
 
+```
 http://[host]/?action=command&command=value_temperature
+```
 
 Example response from this endpoint:
 
