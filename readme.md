@@ -34,3 +34,24 @@ Example:
     }    
 ]
 ```
+
+## How does it work?
+
+The plugin polls this camera endpoint:
+
+http://[host]/?action=command&command=value_temperature
+
+Example response from this endpoint:
+
+```http
+HTTP/1.1 200 OK
+Cache-Control: no-store, no-cache, must-revalidate, pre-check=0, post-check=0, max-age=0
+Connection: Close
+Content-type: text/plain
+Expires: 0
+Pragma: no-cache
+Proxy-Connection: Keep-Alive
+Server: nuvoton
+
+value_temperature: 23.6
+```
